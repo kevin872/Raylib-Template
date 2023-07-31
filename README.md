@@ -1,5 +1,5 @@
 # Raylib-Template
-run code:
+Run code with:
 ```
 make
 ```
