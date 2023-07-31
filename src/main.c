@@ -1,10 +1,8 @@
 #include "../include/raylib.h"
 
-
-typedef struct {
-    Vector2 ballPosition;
-} Player;
-
+//------------------------------------------------------------------------------------
+// Program main entry point
+//------------------------------------------------------------------------------------
 int main(void)
 {
     // Initialization
@@ -12,10 +10,8 @@ int main(void)
     const int screenWidth = 800;
     const int screenHeight = 450;
 
-    InitWindow(screenWidth, screenHeight, "raylib [core] example - keyboard input");
+    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
 
-    // Vector2 ballPosition = { (float)screenWidth/2, (float)screenHeight/2 };
-    Player player = {{ (float)screenWidth/2, (float)screenHeight/2 }};
     SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------------------
 
@@ -24,10 +20,7 @@ int main(void)
     {
         // Update
         //----------------------------------------------------------------------------------
-        if (IsKeyDown(KEY_RIGHT)) player.ballPosition.x += 2.0f;
-        if (IsKeyDown(KEY_LEFT)) player.ballPosition.x -= 2.0f;
-        if (IsKeyDown(KEY_UP)) player.ballPosition.y -= 2.0f;
-        if (IsKeyDown(KEY_DOWN)) player.ballPosition.y += 2.0f;
+        // TODO: Update your variables here
         //----------------------------------------------------------------------------------
 
         // Draw
@@ -36,9 +29,7 @@ int main(void)
 
             ClearBackground(RAYWHITE);
 
-            DrawText("move the ball with arrow keys", 10, 10, 20, DARKGRAY);
-
-            DrawCircleV(ballPosition, 50, MAROON);
+            DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
 
         EndDrawing();
         //----------------------------------------------------------------------------------
